@@ -5,12 +5,14 @@
 @section('content')
 
 <div class="container-fluid px-4">
-    <h1 class="mt-4">All Categories <a href="{{ route('admin.addcategory') }}" class="btn btn-success float-end">Add Category</a></h1>
-
+  <div class="card mt-4">
+    <div class="card-header">
+       <h4 class="mt-4">All Categories <a href="{{ route('admin.addcategory') }}" class="btn btn-success float-end">Add Category</a></h4>
+    </div>
     @if (session('status'))
         <div class="alert alert-success">{{ session('status') }}</div>
     @endif
-
+    <div class="card-body">
     <table class="table table-dark">
         <thead>
           <tr>
@@ -36,6 +38,8 @@
           @endforeach
         </tbody>
       </table>
+    </div>
+    </div>
 </div>
 
 
