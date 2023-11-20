@@ -5,7 +5,7 @@
 @section('content')
 
 <div class="container-fluid px-4">
-    <h1 class="mt-4">All Categories</h1>
+    <h1 class="mt-4">All Categories <a href="{{ route('admin.addcategory') }}" class="btn btn-success float-end">Add Category</a></h1>
 
     @if (session('status'))
         <div class="alert alert-success">{{ session('status') }}</div>
@@ -29,8 +29,8 @@
             <td><img src="{{ asset('uploads/category/'.$category->image ) }}" height="30px" width="30px" alt="Category Image"/></td>
             <td>{{$category->status == 0 ? 'shown' : 'hidden'}}</td>
             <td>
-                <a href="" class="btn btn-success">Edit</a>
-                <a href="" class="btn btn-danger">Delete</a>
+                <a href="{{ route('admin.editcategory',$category->id) }}" class="btn btn-success">Edit</a>
+                <a href="{{ route('admin.deletecategory',$category->id) }}" class="btn btn-danger">Delete</a>
             </td>
           </tr>
           @endforeach

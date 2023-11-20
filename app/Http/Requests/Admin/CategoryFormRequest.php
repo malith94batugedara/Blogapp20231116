@@ -34,7 +34,7 @@ class CategoryFormRequest extends FormRequest
                 'required'
             ],
             'image' => [
-                'required'
+                'nullable'
             ],
             'meta_title' => [
                 'required'
