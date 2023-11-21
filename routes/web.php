@@ -34,4 +34,10 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function() {
     Route::get('/add-post', [PostController::class, 'create'])->name('admin.addpost');
 
     Route::post('/add-post', [PostController::class, 'store'])->name('admin.addpost');
+
+    Route::get('/edit-post/{post_id}', [PostController::class, 'edit'])->name('admin.editpost');
+
+    Route::post('/update-post/{post_id}', [PostController::class, 'update'])->name('admin.updatepost');
+
+    Route::get('/delete-post/{post_id}', [PostController::class, 'delete'])->name('admin.deletepost');
 });
