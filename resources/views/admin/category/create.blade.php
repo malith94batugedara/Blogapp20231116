@@ -30,7 +30,7 @@
                     </div>
                     <div class="mb-3">
                         <label>Description</label>
-                        <textarea name="description" class="form-control" rows="6"></textarea>
+                        <textarea name="description" id="my_summernote" class="form-control" rows="6"></textarea>
                     </div>
                     <div class="mb-3">
                         <label>Image</label>
