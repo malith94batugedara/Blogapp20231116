@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\PostController;
+use App\Http\Controllers\Admin\UserController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -40,4 +41,6 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function() {
     Route::post('/update-post/{post_id}', [PostController::class, 'update'])->name('admin.updatepost');
 
     Route::get('/delete-post/{post_id}', [PostController::class, 'delete'])->name('admin.deletepost');
+
+    Route::get('/users', [UserController::class, 'index'])->name('admin.users');
 });
