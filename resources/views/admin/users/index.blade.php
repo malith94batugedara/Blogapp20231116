@@ -13,7 +13,7 @@
         <div class="alert alert-success">{{ session('status') }}</div>
     @endif
     <div class="card-body">
-    <table class="table table-dark">
+    <table id="my_DataTable" class="table table-dark">
         <thead>
           <tr>
             <th scope="col">ID</th>

@@ -23,6 +23,8 @@
      <!-- Summernote Css links -->
      <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
      <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+     <!-- Datatables Css links -->
+     <link href="//cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css" rel="stylesheet">
 </head>
 <body>
 
@@ -54,6 +56,12 @@
                 height : 200,
             });
             $('.dropdown-toggle').dropdown();
+        });
+    </script>
+    <script src="//cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#my_DataTable").DataTable();
         });
     </script>
 </body>
