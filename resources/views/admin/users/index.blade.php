@@ -32,7 +32,7 @@
             {{-- <td><img src="{{ asset('uploads/category/'.$category->image ) }}" height="30px" width="30px" alt="Category Image"/></td> --}}
             <td>{{$user->role == 0 ? 'user' : 'admin'}}</td>
             <td>
-                <a href="" class="btn btn-success">Edit</a>
+                <a href="{{ route('admin.useredit',$user->id) }}" class="btn btn-success">Edit</a>
                 {{-- <a href="{{ route('admin.deletecategory',$category->id) }}" class="btn btn-danger">Delete</a> --}}
             </td>
           </tr>
